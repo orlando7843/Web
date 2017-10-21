@@ -16,18 +16,25 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-
+	<script type="text/javascript">
+		//取出元素(物件)
+		function load(){
+			var userName=document.getElementById('userName');
+			alert(userName);
+		}
+		
+	</script>
   </head>
   
-  <body>
+  <body onload="load()">
  	<jsp:include page="/banner.jsp"></jsp:include>
     <!-- 靜態網頁標籤 -->
-    <s:form method="post" action="uservalid.action">
+    <s:form method="post" action="uservalid.action" >
     	<fieldset>
     		<legend>登入作業</legend>
-    		<s:textfield label="使用者名稱" name="login.userName"></s:textfield>
+    		<s:textfield label="使用者名稱" name="login.userName" id="userName"></s:textfield>
     		<br/>
-    		<s:password label="使用者密碼" name="login.password"></s:password>
+    		<s:password label="使用者密碼" name="login.password" id="password"></s:password>
     		<s:submit value="登入"></s:submit>
     	</fieldset>
     </s:form>
