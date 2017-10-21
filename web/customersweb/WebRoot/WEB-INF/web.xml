@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>customersweb</display-name>
+  <welcome-file-list>
+  
+    <welcome-file>index</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 網站應用系統參數 -->
+  <context-param>
+  	<param-name>webname</param-name>
+  	<param-value>customersweb</param-value>
+  </context-param>
+   <context-param>
+  	<param-name>address</param-name>
+  	<param-value>台南市公園路1號</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>LoginValidController</servlet-name>
+    <servlet-class>com.tainan.controller.LoginValidController</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginValidController</servlet-name>
+    <url-pattern>/valid.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- struts 2.0攔截器佈署 -->
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <!-- struts2 framework攔截應對檔案模式xxx.action -->
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>*.action</url-pattern>
+  </filter-mapping>
+  
+  <!-- 所有聆聽者 -->
+  <listener>
+  	<listener-class>com.tinan.listener.ApplicationHandler</listener-class>
+  </listener>
+</web-app>
