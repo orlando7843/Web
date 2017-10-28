@@ -21,10 +21,21 @@ public class ApplicationHandler implements ServletContextListener {
 		ServletContext application=arg.getServletContext();
 		String webName=application.getInitParameter("webname");
 		String address=application.getInitParameter("address");
+		//資料環境擷取
+		String driverClassName=application.getInitParameter("driverClassName");
+		String url=application.getInitParameter("url");
+		String userName=application.getInitParameter("userName");
+		String password=application.getInitParameter("password");
+		
 		//將資訊封裝在一個Javabean
 		AppInformation info=new AppInformation();
 		info.setWebName(webName);
 		info.setAddress(address);
+		//注入資料環境資訊
+		info.setDriverClassName(driverClassName);
+		info.setUrl(url);
+		info.setUserName(userName);
+		info.setPassword(password);
 		//進入應用系統狀態管理
 		application.setAttribute("info",info);
 		

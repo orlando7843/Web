@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.tainan.domain.LoginBean;
 
 public class RegiserController extends ActionSupport {
-	//封裝性
+	//封裝性Attribute(Javabean物件)
 	private LoginBean login=new LoginBean();
 	
 
@@ -23,9 +23,7 @@ public class RegiserController extends ActionSupport {
 		this.login = login;
 	}
 
-	/**
-	 * @return
-	 */
+	//default action
 	public String execute() {
 		//空的
 		login.setUserName("零零七");
@@ -36,13 +34,19 @@ public class RegiserController extends ActionSupport {
 	public String userValid()
 	{
 		//界接Action與Java Web Servlet所有物件
-		HttpServletRequest request=ServletActionContext.getRequest();
-		HttpServletResponse response=ServletActionContext.getResponse();
-		ServletContext application=ServletActionContext.getServletContext();
+		//HttpServletRequest request=ServletActionContext.getRequest();
+		//HttpServletResponse response=ServletActionContext.getResponse();
+		//ServletContext application=ServletActionContext.getServletContext();
 		//使用表單欄位就是參數概念
 //		@SuppressWarnings("unused")
 //		String userName=request.getParameter("userName");
 //		String password=request.getParameter("password");
+		
+		//1.建構DataSource物件
+		//2.建構自訂DAO物件
+		//3.設定DAO與DataSource互動(DI)
+		//4.進行會員資料查詢
+		//5.yes or no 不同的派送
 		
 		return SUCCESS;
 	}
