@@ -16,4 +16,9 @@
 	</result></action>
 	<action name="uservalid"
 		class="com.tainan.controller.RegiserController" method="userValid">
-	<result name="success">/WEB-INF/register/ok.jsp</result></action></package></struts>    
+	<result name="success">/WEB-INF/register/ok.jsp</result>
+	<result name="nouser" type="dispatcher">
+		/WEB-INF/register/loginfailure.jsp
+	</result></action></package>
+	
+<include file="sales.xml"></include></struts>    

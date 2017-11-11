@@ -1,5 +1,5 @@
 package com.tainan.domain;
-//JavaBean
+//JavaBean 三個規則(實作序列化介面/空參數建構子/封裝欄位---設定setter and getter)
 public class LoginBean implements java.io.Serializable {
 	//attribute
 	private String userName;
