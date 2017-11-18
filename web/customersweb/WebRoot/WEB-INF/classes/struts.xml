@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
-
+	
 	<package name="home" extends="struts-default">
 		<action name="index" class="com.tainan.domain.HomeController" method="home">
 		<result name="success" type="dispatcher">
@@ -21,4 +21,4 @@
 		/WEB-INF/register/loginfailure.jsp
 	</result></action></package>
 	
-<include file="sales.xml"></include></struts>    
+<include file="sales.xml"></include><include file="customers.xml"></include></struts>    

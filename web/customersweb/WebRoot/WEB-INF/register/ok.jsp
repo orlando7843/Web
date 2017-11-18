@@ -20,5 +20,9 @@
   
   <body>
     <s:property value="login.userName"/> 登入成功
+    <br/>
+    <%=session.getId() %>
+    <br/>
+    ${sessionScope['cred']}
   </body>
 </html>

@@ -43,7 +43,7 @@ public class LoginDAO implements IDao<LoginBean,String>{
 		//4.透過連接物件產生命令物件 
 		PreparedStatement st=connection.prepareStatement(sql);
 		//5.設定參數內容
-		st.setString(1, userName);
+		st.setString(1,userName);
 		st.setString(2, this.password);
 		//6查詢 產生結果集
 		ResultSet rs=st.executeQuery(); //線上讀取

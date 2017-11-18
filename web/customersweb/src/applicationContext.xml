@@ -27,4 +27,20 @@
 			<value>eric</value>
 		</property>
 	</bean>
+	<!-- 部署DataSource -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<!-- 注入屬性 必須組態設定 -->
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/webdemo</value>
+		</property>
+		<property name="username" value="root"/>
+		<property name="password" value="1111"/>
+	</bean>
+	
+	<!-- 佈署自訂的DAO物件  -->
+	<bean id="dao" class="com.tainan.domain.LoginDAO">
+		<!-- 注入DataSource bean (DI) 控制反轉 -->
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
 </beans>
