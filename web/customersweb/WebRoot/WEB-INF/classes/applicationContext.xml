@@ -43,4 +43,14 @@
 		<!-- 注入DataSource bean (DI) 控制反轉 -->
 		<property name="dataSource" ref="dataSource"/>
 	</bean>
+	<!-- Update Customers DAO元件 -->
+	<bean id="customersDAO" class="com.tainan.domain.CustomersUpdateDao">
+		<!-- Property Injection(Dependency Injection) -->
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	<!-- jdbctemplate bean -->
+	<bean id="jdbctemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<!-- 必須注入dataSource -->
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
 </beans>

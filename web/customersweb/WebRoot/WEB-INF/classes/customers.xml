@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
+	
 	<package name="customers" namespace="/customers"
 		extends="struts-default">
 		<!-- package global interceptor -->
-		<interceptors>
-			<interceptor name="customersIntceptor" class="com.tainan.interceptor.CustomersInterceptor"/>
-		</interceptors>
+	<interceptors>
+		<interceptor name="customersIntceptor" class="com.tainan.interceptor.CustomersInterceptor"/>
+	</interceptors>
 	<action name="customersform"
 		class="com.tainan.controller.CustomersController">
 		<interceptor-ref name="customersIntceptor"/>
@@ -14,4 +15,11 @@
 		
 	<result name="success" type="dispatcher">
 		/WEB-INF/customers/customersform.jsp
-	</result></action></package></struts>
+	</result></action>
+	<action name="save" class="com.tainan.controller.CustomersController" method="jdbcTemplatePSS">
+		<result name="success" type="dispatcher">
+			/WEB-INF/customers/customerssaveok.jsp
+		</result>
+		<result name="failure" type="dispatcher">
+			/WEB-INF/customers/failure.jsp
+		</result></action></package></struts>

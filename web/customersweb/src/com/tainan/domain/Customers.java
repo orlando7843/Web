@@ -6,18 +6,18 @@ import java.util.Date;
 //Entity class as Javabean
 public class Customers implements java.io.Serializable {
 	//attribute
-	private String csutomerid;
+	private String customerid;
 	private String companyname;
 	private String address;
 	private String phone;
 	private String email;
 	private String contactname;
 	private Date createdate;
-	public String getCsutomerid() {
-		return csutomerid;
+	public String getCustomerid() {
+		return customerid;
 	}
-	public void setCsutomerid(String csutomerid) {
-		this.csutomerid = csutomerid;
+	public void setCustomerid(String customerid) {
+		this.customerid = customerid;
 	}
 	public String getCompanyname() {
 		return companyname;

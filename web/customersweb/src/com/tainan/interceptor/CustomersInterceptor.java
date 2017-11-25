@@ -23,7 +23,7 @@ public class CustomersInterceptor implements Interceptor {
 		//建構一個客戶物件
 		customers=new Customers();
 		//設定初始值
-		customers.setCsutomerid("9999");
+		customers.setCustomerid("9999");
 		customers.setCompanyname("巨匠");
 		customers.setAddress("");
 		customers.setPhone("");

@@ -157,7 +157,7 @@
  <li class="active"><a href="/${applicationScope.info.webName}/index.action">首頁</a></li>
  <li><a href="#">客戶資料維護</a>
   <ul>
-   <li><a href="#">客戶資料新增</a></li>
+   <li><a href="customers/customersform.action">客戶資料新增</a></li>
    <li><a href="#">客戶資料查詢</a></li>
    
   </ul>

@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="BIG5"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 
 
@@ -19,7 +19,7 @@
 	-->
 	<style type="text/css">
 		input[type='text']{
-			width:300px;
+			width:400px;
 			color:blue;
 			font-size:18px;
 		}
@@ -28,16 +28,16 @@
   
   <body>
   <fieldset>
-  	<legend>«È¤á¸ê®ÆºûÅ@</legend>
-  	<s:form>
-  		<s:textfield label="«È¤á½s¸¹" name="customers.customerid"></s:textfield>
-  		<s:textfield label="¤½¥q¦æ¸¹" name="customers.companyname"></s:textfield>
-  		<s:textfield label="Ápµ¸¤H" name="customers.contactname"></s:textfield>
-  		<s:textfield label="Ápµ¸¦a§}" name="customers.address"></s:textfield>
-  		<s:textfield label="³sµ¸¹q¸Ü" name="customers.phone"></s:textfield>
+  	<legend>å®¢æˆ¶è³‡æ–™ç¶­è­·</legend>
+  	<s:form method="post" action="save">
+  		<s:textfield label="å®¢æˆ¶ç·¨è™Ÿ" name="customers.customerid"></s:textfield>
+  		<s:textfield label="å…¬å¸è¡Œè™Ÿ" name="customers.companyname"></s:textfield>
+  		<s:textfield label="è¯çµ¡äºº" name="customers.contactname"></s:textfield>
+  		<s:textfield label="è¯çµ¡åœ°å€" name="customers.address"></s:textfield>
+  		<s:textfield label="é€£çµ¡é›»è©±" name="customers.phone"></s:textfield>
   		<s:textfield label="EMAIL" name="customers.email"></s:textfield>
-  		<s:submit value="·s¼W"></s:submit>
-  		<s:reset value="¨ú®ø"></s:reset>
+  		<s:submit value="æ–°å¢ž"></s:submit>
+  		<s:reset value="å–æ¶ˆ"></s:reset>
   	</s:form>
   </fieldset>
   </body>
